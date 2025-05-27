@@ -1,19 +1,31 @@
 import React from 'react';
 
+import vicenteImg from './images/team/vicente.jpg';
+import daryaImg from './images/team/darya.jpg';
+import andreaImg from './images/team/andrea.jpg';
+import hungImg from './images/team/tom.jpg';
+//import sadiqahImg from './images/team/sadiqah.jpg';
+import elyasImg from './images/team/elyas.jpg';
+import zahraImg from './images/team/zahra.jpg';
+import qijianImg from './images/team/jason.jpg';
+import vanessaImg from './images/team/nessa.jpg';
+import yaayaImg from './images/team/yahya.jpg';
+import farnoushImg from './images/team/farnoush.jpg';
+//import maabImg from './images/team/maab.jpg';
+//import eduardoImg from './images/team/eduardo.jpg';
+//import michaelImg from './images/team/michael.jpg';
+
 const team = [
-  { name: 'Vicente Ramos', role: 'President', major: 'PhD Computer Science', image: '/images/team/vicente.jpg' },
-  { name: 'Darya Voljina', role: 'Vice President', major: 'BS Computer Science', image: '/images/team/darya.jpg' },
-  { name: 'Andrea Olvera', role: 'BS Finance', major: 'BS Finance', image: '/images/team/andrea.jpg' },
-  { name: 'Hung Nguyen', role: 'Treasurer', major: 'MS Business Analytics', image: '/images/team/hung.jpg' },
-  { name: 'Sadiqah Al-Masyabi', role: 'Tech Intern', major: 'BS Computer Science', image: '/images/team/sadiqah.jpg' },
-  { name: 'Elyas Larfi', role: 'Technology Officer', major: 'BS Computer Science', image: '/images/team/elyas.jpg' },
-  { name: 'Zahra Abdullahi', role: 'Technology Assistant', major: 'BS Computer Science', image: '/images/team/zahra.jpg' },
-  { name: 'Qijian Ma', role: 'Technology Officer', major: 'BS Computer Science', image: '/images/team/qijian.jpg' },
-  { name: 'Vanessa Benavente', role: 'Outreach Coordinator', major: 'BS Computer Science', image: '/images/team/vanessa.jpg' },
-  { name: 'Yahya Hama', role: 'Technology Assistant', major: 'Computer Science', image: '/images/team/yaaya.jpg' },
-  { name: 'Maab Taha', role: 'Intern', major: 'BS Computer Science', image: '/images/team/maab.jpg' },
-  { name: 'Eduardo Galvez', role: 'Intern', major: 'BS Computer Science', image: '/images/team/eduardo.jpg' },
-  { name: 'Michael Bolar', role: 'Intern', major: 'BS Computer Science', image: '/images/team/michael.jpg' },
+  { name: 'Farnoush Banaei-Kashani', role: 'Advisor', major: 'Associate Professor', image: farnoushImg },
+  { name: 'Vicente Ramos', role: 'President', major: 'PhD Computer Science', image: vicenteImg },
+  { name: 'Darya Voljina', role: 'Vice President', major: 'BS Computer Science', image: daryaImg },
+  { name: 'Andrea Olvera', role: 'BS Finance', major: 'BS Finance', image: andreaImg },
+  { name: 'Hung Nguyen', role: 'Treasurer', major: 'MS Business Analytics', image: hungImg },
+  { name: 'Elyas Larfi', role: 'Technology Officer', major: 'BS Computer Science', image: elyasImg },
+  { name: 'Zahra Abdullahi', role: 'Technology Assistant', major: 'BS Computer Science', image: zahraImg },
+  { name: 'Qijian Ma', role: 'Technology Officer', major: 'BS Computer Science', image: qijianImg },
+  { name: 'Vanessa Benavente', role: 'Outreach Coordinator', major: 'BS Computer Science', image: vanessaImg },
+  { name: 'Yahya Hama', role: 'Technology Assistant', major: 'Computer Science', image: yaayaImg },
 ];
 
 export default function Team() {
