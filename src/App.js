@@ -9,6 +9,7 @@ import Join from './components/Join.tsx';
 import Contact from './components/Contact.tsx'; 
 import Nav from './components/Nav.tsx';
 import Footer from './components/Footer.tsx';
+import Projects from './components/Projects.tsx';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Nav />
 
         {/* Main content */}
-        <main className="flex-grow">
+        <main className="pt-24">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
@@ -27,11 +28,9 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/join" element={<Join />} />
             <Route path="/contact" element={<Contact />} />
-
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </main>
-
-        <Footer />
       </div>
     </Router>
   );
