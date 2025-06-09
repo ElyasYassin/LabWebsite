@@ -1,0 +1,53 @@
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import logo from './images/logo.png';
+import { Menu, X } from 'lucide-react';
+
+export default function Nav() {
+  const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const isActive = (path) => location.pathname === path;
+
+  const linkClass = (path) =>
+    `transition-colors duration-200 ${
+      isActive(path) ? 'text-indigo-600 font-semibold' : 'text-black hover:text-gray-700'
+    }`;
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 p-4 flex justify-between items-center bg-white shadow">
+      <Link to="/" className="flex items-center space-x-2">
+        <img src={logo} alt="SAIR Lab Logo" className="h-12 w-12" />
+        <span className="text-xl font-semibold text-black">SAIR Lab</span>
+      </Link>
+
+      <div className="hidden md:flex space-x-6 font-medium">
+        <Link to="/about" className={linkClass('/about')}>About</Link>
+        <Link to="/team" className={linkClass('/team')}>Team</Link>
+        <Link to="/projects" className={linkClass('/projects')}>Research</Link>
+        <Link to="/join" className={linkClass('/join')}>Join Us</Link>
+        <Link to="/contact" className={linkClass('/contact')}>Contact</Link>
+      </div>
+
+      <button
+        onClick={toggleMenu}
+        className="md:hidden text-black focus:outline-none"
+        aria-label="Toggle Menu"
+      >
+        {menuOpen ? <X size={28} /> : <Menu size={28} />}
+      </button>
+
+      {menuOpen && (
+        <div className="absolute top-full left-0 right-0 bg-white shadow-md py-4 px-6 flex flex-col space-y-4 md:hidden">
+          <Link to="/about" className={linkClass('/about')} onClick={toggleMenu}>About</Link>
+          <Link to="/team" className={linkClass('/team')} onClick={toggleMenu}>Team</Link>
+          <Link to="/projects" className={linkClass('/projects')} onClick={toggleMenu}>Research</Link>
+          <Link to="/join" className={linkClass('/join')} onClick={toggleMenu}>Join Us</Link>
+          <Link to="/contact" className={linkClass('/contact')} onClick={toggleMenu}>Contact</Link>
+        </div>
+      )}
+    </nav>
+  );
+}
