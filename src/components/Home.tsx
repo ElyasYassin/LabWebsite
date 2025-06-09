@@ -24,9 +24,9 @@ export default function Home() {
         <p className="mt-4 text-2xl">
           Student AI Research Lab | Exploring the future of Artificial Intelligence
         </p>
-        <div className="mt-6 space-x-4">
-          <Link to="/about" className="px-5 py-2 bg-white text-blue-800 rounded hover:bg-gray-100">About Us</Link>
-          <Link to="/projects" className="px-5 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">Our Research</Link>
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <Link to="/about" className="px-6 py-3 bg-white text-blue-800 font-semibold rounded-xl hover:bg-gray-100 focus:ring-2">About Us</Link>
+          <Link to="/projects" className="px-6 py-3 bg-gray-200 text-gray-800 font-semibold rounded-xl hover:bg-gray-300 focus:ring-2">Our Research</Link>
         </div>
       </div>
     </section>
